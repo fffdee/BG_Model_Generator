@@ -56,11 +56,11 @@
 
             config HIGH_DEBUG_LEVEL
                 bool "High debug level"
-                default y
+                default n
 
             config SUPER_DEBUG_LEVEL
                 bool "Super debug level"
-                default y
+                default n
 
         endmenu
     endif
