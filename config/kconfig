@@ -1,0 +1,1127 @@
+mainmenu "BG Model Generator"
+
+
+
+
+menu "System config" 
+    
+    source "./system_config/kconfig"
+
+endmenu
+
+    
+config NUM_FUNCSTIONS
+    int "Number of funcstions"
+    default 1
+    range 0 20
+    help
+      Select the number of funcstions you want to configure.
+
+config SOFTWARE_VERSION
+    string "Software version"
+    default "V1.0.1"
+
+if NUM_FUNCSTIONS > 0
+    menu "funcstion"      
+        config FUNCSTION1
+                string "name "
+                default "N"
+                
+                
+
+            config FUNCSTION_DESCRIPTION1
+                    string "Description of funcstion"
+                    default "This is a funcstion description"
+
+            config  ENABLE_ARG1
+                    bool "Enable Arg"
+                    default y
+                    
+            config  ARG_VALUE1
+                string "arg info"
+                default "uint8_t count, uint8_t* chord"
+                
+                depends on ENABLE_ARG1
+           
+            config  ENABLE_RETURN_ARG1
+                bool "Enable return Arg "
+                default y
+                help
+                    Enable return Arg.
+          if ENABLE_RETURN_ARG1
+            choice
+                prompt "Paltform of model to configure"
+                default RETURN_ARG1
+
+                config  RETURN_ARG1
+                bool "return Arg "
+               
+
+                config  RETURN_ERR_CODE1
+                    bool "return err code"
+                    depends on ENABLE_ERR_CODE
+                
+            endchoice  
+
+          endif
+
+           
+            if RETURN_ARG1
+                config   RETURN_ARG_VALUE1
+                    string "Return type"
+                    default "uint8_t"
+                
+            endif 
+            
+ 
+        
+        endmenu
+endif 
+    
+    if NUM_FUNCSTIONS > 1
+    menu "funcstion" 
+        config FUNCSTION2
+                string "name "
+                default "N"
+                
+                
+
+            config FUNCSTION_DESCRIPTION2
+                    string "Description of funcstion"
+                    default "This is a funcstion description"
+
+            config  ENABLE_ARG2
+                    bool "Enable Arg"
+                    default y
+                    
+            config  ARG_VALUE2
+                string "arg info"
+                default "uint8_t count, uint8_t* chord"
+                
+                depends on ENABLE_ARG2
+           
+            config  ENABLE_RETURN_ARG2
+                bool "Enable return Arg "
+                default y
+                help
+                    Enable return Arg.
+          if ENABLE_RETURN_ARG2
+            choice
+                prompt "Paltform of model to configure"
+                default RETURN_ARG2
+
+                config  RETURN_ARG2
+                bool "return Arg "
+               
+
+                config  RETURN_ERR_CODE2
+                    bool "return err code"
+                    depends on ENABLE_ERR_CODE
+                
+            endchoice  
+
+          endif
+
+           
+            if RETURN_ARG2
+                config   RETURN_ARG_VALUE2
+                    string "Return type"
+                    default "uint8_t"
+                
+            endif 
+    
+    endmenu
+    endif 
+    if NUM_FUNCSTIONS > 2
+        menu "funcstion" 
+            config FUNCSTION3
+                string "name "
+                default "N"
+                
+                
+
+            config FUNCSTION_DESCRIPTION3
+                    string "Description of funcstion"
+                    default "This is a funcstion description"
+
+            config  ENABLE_ARG3
+                    bool "Enable Arg"
+                    default y
+                    
+            config  ARG_VALUE3
+                string "arg info"
+                default "uint8_t count, uint8_t* chord"
+                
+                depends on ENABLE_ARG3
+           
+            config  ENABLE_RETURN_ARG3
+                bool "Enable return Arg "
+                default y
+                help
+                    Enable return Arg.
+          if ENABLE_RETURN_ARG3
+            choice
+                prompt "Paltform of model to configure"
+                default RETURN_ARG3
+
+                config  RETURN_ARG3
+                bool "return Arg "
+               
+
+                config  RETURN_ERR_CODE3
+                    bool "return err code"
+                    depends on ENABLE_ERR_CODE
+                
+            endchoice  
+
+          endif
+
+           
+            if RETURN_ARG3
+                config   RETURN_ARG_VALUEe
+                    string "Return type"
+                    default "uint8_t"
+                
+            endif 
+        
+        endmenu
+    endif
+    if NUM_FUNCSTIONS > 3
+        menu "funcstion" 
+            config FUNCSTION4
+                string "name "
+                default "N"
+                
+                
+
+            config FUNCSTION_DESCRIPTION4
+                    string "Description of funcstion"
+                    default "This is a funcstion description"
+
+            config  ENABLE_ARG4
+                    bool "Enable Arg"
+                    default y
+                    
+            config  ARG_VALUE4
+                string "arg info"
+                default "uint8_t count, uint8_t* chord"
+                
+                depends on ENABLE_ARG4
+           
+            config  ENABLE_RETURN_ARG4
+                bool "Enable return Arg "
+                default y
+                help
+                    Enable return Arg.
+          if ENABLE_RETURN_ARG4
+            choice
+                prompt "Paltform of model to configure"
+                default RETURN_ARG4
+
+                config  RETURN_ARG4
+                bool "return Arg "
+               
+
+                config  RETURN_ERR_CODE4
+                    bool "return err code"
+                    depends on ENABLE_ERR_CODE
+                
+            endchoice  
+
+          endif
+
+           
+            if RETURN_ARG4
+                config   RETURN_ARG_VALUE
+                    string "Return type"
+                    default "uint8_t"
+                
+            endif 
+            
+        endmenu
+    endif
+    
+    if NUM_FUNCSTIONS > 4
+        menu "funcstion" 
+            config FUNCSTION5
+                string "name "
+                default "N"
+                
+                
+
+            config FUNCSTION_DESCRIPTION5
+                    string "Description of funcstion"
+                    default "This is a funcstion description"
+
+            config  ENABLE_ARG5
+                    bool "Enable Arg"
+                    default y
+                    
+            config  ARG_VALUE5
+                string "arg info"
+                default "uint8_t count, uint8_t* chord"
+                
+                depends on ENABLE_ARG5
+           
+            config  ENABLE_RETURN_ARG5
+                bool "Enable return Arg "
+                default y
+                help
+                    Enable return Arg.
+          if ENABLE_RETURN_ARG5
+            choice
+                prompt "Paltform of model to configure"
+                default RETURN_ARG5
+
+                config  RETURN_ARG5
+                bool "return Arg "
+               
+
+                config  RETURN_ERR_CODE5
+                    bool "return err code"
+                    depends on ENABLE_ERR_CODE
+                
+            endchoice  
+
+          endif
+
+           
+            if RETURN_ARG5
+                config   RETURN_ARG_VALUE5
+                    string "Return type"
+                    default "uint8_t"
+                
+            endif 
+            
+        endmenu
+    endif
+    
+    if NUM_FUNCSTIONS > 5
+        menu "funcstion" 
+            config FUNCSTION6
+                string "name "
+                default "N"
+                
+                
+
+            config FUNCSTION_DESCRIPTION6
+                    string "Description of funcstion"
+                    default "This is a funcstion description"
+
+            config  ENABLE_ARG6
+                    bool "Enable Arg"
+                    default y
+                    
+            config  ARG_VALUE6
+                string "arg info"
+                default "uint8_t count, uint8_t* chord"
+                
+                depends on ENABLE_ARG6
+           
+            config  ENABLE_RETURN_ARG6
+                bool "Enable return Arg "
+                default y
+                help
+                    Enable return Arg.
+          if ENABLE_RETURN_ARG6
+            choice
+                prompt "Paltform of model to configure"
+                default RETURN_ARG6
+
+                config  RETURN_ARG6
+                bool "return Arg "
+               
+
+                config  RETURN_ERR_CODE6
+                    bool "return err code"
+                    depends on ENABLE_ERR_CODE
+                
+            endchoice  
+
+          endif
+
+           
+            if RETURN_ARG6
+                config   RETURN_ARG_VALUE6
+                    string "Return type"
+                    default "uint8_t"
+                
+            endif 
+            
+        endmenu
+    endif
+    
+    
+    
+    if NUM_FUNCSTIONS > 6
+        menu "funcstion" 
+            config FUNCSTION7
+                string "name "
+                default "N"
+                
+                
+
+            config FUNCSTION_DESCRIPTION7
+                    string "Description of funcstion"
+                    default "This is a funcstion description"
+
+            config  ENABLE_ARG7
+                    bool "Enable Arg"
+                    default y
+                    
+            config  ARG_VALUE7
+                string "arg info"
+                default "uint8_t count, uint8_t* chord"
+                
+                depends on ENABLE_ARG7
+           
+            config  ENABLE_RETURN_ARG7
+                bool "Enable return Arg "
+                default y
+                help
+                    Enable return Arg.
+          if ENABLE_RETURN_ARG7
+            choice
+                prompt "Paltform of model to configure"
+                default RETURN_ARG7
+
+                config  RETURN_ARG7
+                bool "return Arg "
+               
+
+                config  RETURN_ERR_CODE7
+                    bool "return err code"
+                    depends on ENABLE_ERR_CODE
+                
+            endchoice  
+
+          endif
+
+           
+            if RETURN_ARG
+                config   RETURN_ARG_VALUE7
+                    string "Return type"
+                    default "uint8_t"
+                
+            endif 
+            
+        endmenu
+    endif
+    
+    if NUM_FUNCSTIONS > 7
+        menu "funcstion" 
+            config FUNCSTION8
+                string "name "
+                default "N"
+                
+                
+
+            config FUNCSTION_DESCRIPTION8
+                    string "Description of funcstion"
+                    default "This is a funcstion description"
+
+            config  ENABLE_ARG8
+                    bool "Enable Arg"
+                    default y
+                    
+            config  ARG_VALUE8
+                string "arg info"
+                default "uint8_t count, uint8_t* chord"
+                
+                depends on ENABLE_ARG8
+           
+            config  ENABLE_RETURN_ARG8
+                bool "Enable return Arg "
+                default y
+                help
+                    Enable return Arg.
+          if ENABLE_RETURN_ARG8
+            choice
+                prompt "Paltform of model to configure"
+                default RETURN_ARG8
+
+                config  RETURN_ARG8
+                bool "return Arg "
+               
+
+                config  RETURN_ERR_CODE8
+                    bool "return err code"
+                    depends on ENABLE_ERR_CODE
+                
+            endchoice  
+
+          endif
+
+           
+            if RETURN_ARG8
+                config   RETURN_ARG_VALUE8
+                    string "Return type"
+                    default "uint8_t"
+                
+            endif 
+            
+        endmenu
+    endif
+    
+    if NUM_FUNCSTIONS > 8
+        menu "funcstion" 
+            config FUNCSTION9
+                string "name "
+                default "N"
+                
+                
+
+            config FUNCSTION_DESCRIPTION9
+                    string "Description of funcstion"
+                    default "This is a funcstion description"
+
+            config  ENABLE_ARG9
+                    bool "Enable Arg"
+                    default y
+                    
+            config  ARG_VALUE9
+                string "arg info"
+                default "uint8_t count, uint8_t* chord"
+                
+                depends on ENABLE_ARG9
+           
+            config  ENABLE_RETURN_ARG9
+                bool "Enable return Arg "
+                default y
+                help
+                    Enable return Arg.
+          if ENABLE_RETURN_ARG9
+            choice
+                prompt "Paltform of model to configure"
+                default RETURN_ARG9
+
+                config  RETURN_ARG9
+                bool "return Arg "
+               
+
+                config  RETURN_ERR_CODE9
+                    bool "return err code"
+                    depends on ENABLE_ERR_CODE
+                
+            endchoice  
+
+          endif
+
+           
+            if RETURN_ARG9
+                config   RETURN_ARG_VALUE9
+                    string "Return type"
+                    default "uint8_t"
+                
+            endif 
+            
+        endmenu
+    endif
+    
+    
+    if NUM_FUNCSTIONS > 9
+        menu "funcstion" 
+            config FUNCSTION10
+                string "name "
+                default "N"
+                
+                
+
+            config FUNCSTION_DESCRIPTION10
+                    string "Description of funcstion"
+                    default "This is a funcstion description"
+
+            config  ENABLE_ARG10
+                    bool "Enable Arg"
+                    default y
+                    
+            config  ARG_VALUE10
+                string "arg info"
+                default "uint8_t count, uint8_t* chord"
+                
+                depends on ENABLE_ARG10
+           
+            config  ENABLE_RETURN_ARG10
+                bool "Enable return Arg "
+                default y
+                help
+                    Enable return Arg.
+          if ENABLE_RETURN_ARG10
+            choice
+                prompt "Paltform of model to configure"
+                default RETURN_ARG10
+
+                config  RETURN_ARG10
+                bool "return Arg "
+               
+
+                config  RETURN_ERR_CODE10
+                    bool "return err code"
+                    depends on ENABLE_ERR_CODE
+                
+            endchoice  
+
+          endif
+
+           
+            if RETURN_ARG10
+                config   RETURN_ARG_VALUE10
+                    string "Return type"
+                    default "uint8_t"
+                
+            endif 
+            
+        endmenu
+    endif
+    
+    if NUM_FUNCSTIONS > 10
+        menu "funcstion" 
+            config FUNCSTION11
+                string "name "
+                default "N"
+                
+                
+
+            config FUNCSTION_DESCRIPTION11
+                    string "Description of funcstion"
+                    default "This is a funcstion description"
+
+            config  ENABLE_ARG11
+                    bool "Enable Arg"
+                    default y
+                    
+            config  ARG_VALUE11
+                string "arg info"
+                default "uint8_t count, uint8_t* chord"
+                
+                depends on ENABLE_ARG11
+           
+            config  ENABLE_RETURN_ARG11
+                bool "Enable return Arg "
+                default y
+                help
+                    Enable return Arg.
+          if ENABLE_RETURN_ARG11
+            choice
+                prompt "Paltform of model to configure"
+                default RETURN_ARG11
+
+                config  RETURN_ARG11
+                bool "return Arg "
+               
+
+                config  RETURN_ERR_CODE11
+                    bool "return err code"
+                    depends on ENABLE_ERR_CODE
+                
+            endchoice  
+
+          endif
+
+           
+            if RETURN_ARG11
+                config   RETURN_ARG_VALUE11
+                    string "Return type"
+                    default "uint8_t"
+                
+            endif 
+            
+        endmenu
+    endif
+    
+    if NUM_FUNCSTIONS > 11
+        menu "funcstion" 
+            config FUNCSTION12
+                string "name "
+                default "N"
+                
+                
+
+            config FUNCSTION_DESCRIPTION12
+                    string "Description of funcstion"
+                    default "This is a funcstion description"
+
+            config  ENABLE_ARG12
+                    bool "Enable Arg"
+                    default y
+                    
+            config  ARG_VALUE12
+                string "arg info"
+                default "uint8_t count, uint8_t* chord"
+                
+                depends on ENABLE_ARG12
+           
+            config  ENABLE_RETURN_ARG12
+                bool "Enable return Arg "
+                default y
+                help
+                    Enable return Arg.
+          if ENABLE_RETURN_ARG12
+            choice
+                prompt "Paltform of model to configure"
+                default RETURN_ARG12
+
+                config  RETURN_ARG12
+                bool "return Arg "
+               
+
+                config  RETURN_ERR_CODE12
+                    bool "return err code"
+                    depends on ENABLE_ERR_CODE
+                
+            endchoice  
+
+          endif
+
+           
+            if RETURN_ARG12
+                config   RETURN_ARG_VALUE12
+                    string "Return type"
+                    default "uint8_t"
+                
+            endif 
+            
+        endmenu
+    endif
+    
+    if NUM_FUNCSTIONS > 12
+        menu "funcstion" 
+            config FUNCSTION13
+                string "name "
+                default "N"
+                
+                
+
+            config FUNCSTION_DESCRIPTION13
+                    string "Description of funcstion"
+                    default "This is a funcstion description"
+
+            config  ENABLE_ARG13
+                    bool "Enable Arg"
+                    default y
+                    
+            config  ARG_VALUE13
+                string "arg info"
+                default "uint8_t count, uint8_t* chord"
+                
+                depends on ENABLE_ARG13
+           
+            config  ENABLE_RETURN_ARG13
+                bool "Enable return Arg "
+                default y
+                help
+                    Enable return Arg.
+          if ENABLE_RETURN_ARG13
+            choice
+                prompt "Paltform of model to configure"
+                default RETURN_ARG13
+
+                config  RETURN_ARG13
+                bool "return Arg "
+               
+
+                config  RETURN_ERR_CODE13
+                    bool "return err code"
+                    depends on ENABLE_ERR_CODE
+                
+            endchoice  
+
+          endif
+
+           
+            if RETURN_ARG13
+                config   RETURN_ARG_VALUE13
+                    string "Return type"
+                    default "uint8_t"
+                
+            endif 
+            
+        endmenu
+    endif
+    
+    if NUM_FUNCSTIONS > 13
+        menu "funcstion" 
+            config FUNCSTION14
+                string "name "
+                default "N"
+                
+                
+
+            config FUNCSTION_DESCRIPTION14
+                    string "Description of funcstion"
+                    default "This is a funcstion description"
+
+            config  ENABLE_ARG14
+                    bool "Enable Arg"
+                    default y
+                    
+            config  ARG_VALUE14
+                string "arg info"
+                default "uint8_t count, uint8_t* chord"
+                
+                depends on ENABLE_ARG14
+           
+            config  ENABLE_RETURN_ARG14
+                bool "Enable return Arg "
+                default y
+                help
+                    Enable return Arg.
+          if ENABLE_RETURN_ARG14
+            choice
+                prompt "Paltform of model to configure"
+                default RETURN_ARG14
+
+                config  RETURN_ARG14
+                bool "return Arg "
+               
+
+                config  RETURN_ERR_CODE14
+                    bool "return err code"
+                    depends on ENABLE_ERR_CODE
+                
+            endchoice  
+
+          endif
+
+           
+            if RETURN_ARG14
+                config   RETURN_ARG_VALUE14
+                    string "Return type"
+                    default "uint8_t"
+                
+            endif 
+            
+        endmenu
+    endif
+    
+    if NUM_FUNCSTIONS > 14
+        menu "funcstion" 
+            config FUNCSTION15
+                string "name "
+                default "N"
+                
+                
+
+            config FUNCSTION_DESCRIPTION15
+                    string "Description of funcstion"
+                    default "This is a funcstion description"
+
+            config  ENABLE_ARG15
+                    bool "Enable Arg"
+                    default y
+                    
+            config  ARG_VALUE15
+                string "arg info"
+                default "uint8_t count, uint8_t* chord"
+                
+                depends on ENABLE_ARG15
+           
+            config  ENABLE_RETURN_ARG15
+                bool "Enable return Arg "
+                default y
+                help
+                    Enable return Arg.
+          if ENABLE_RETURN_ARG15
+            choice
+                prompt "Paltform of model to configure"
+                default RETURN_ARG15
+
+                config  RETURN_ARG15
+                bool "return Arg "
+               
+
+                config  RETURN_ERR_CODE15
+                    bool "return err code"
+                    depends on ENABLE_ERR_CODE
+                
+            endchoice  
+
+          endif
+
+           
+            if RETURN_ARG15
+                config   RETURN_ARG_VALUE15
+                    string "Return type"
+                    default "uint8_t"
+                
+            endif 
+            
+        endmenu
+    endif
+    
+    if NUM_FUNCSTIONS > 15
+        menu "funcstion" 
+            config FUNCSTION16
+                string "name "
+                default "N"
+                
+                
+
+            config FUNCSTION_DESCRIPTION16
+                    string "Description of funcstion"
+                    default "This is a funcstion description"
+
+            config  ENABLE_ARG16
+                    bool "Enable Arg"
+                    default y
+                    
+            config  ARG_VALUE16
+                string "arg info"
+                default "uint8_t count, uint8_t* chord"
+                
+                depends on ENABLE_ARG16
+           
+            config  ENABLE_RETURN_ARG16
+                bool "Enable return Arg "
+                default y
+                help
+                    Enable return Arg.
+          if ENABLE_RETURN_ARG16
+            choice
+                prompt "Paltform of model to configure"
+                default RETURN_ARG16
+
+                config  RETURN_ARG16
+                bool "return Arg "
+               
+
+                config  RETURN_ERR_CODE16
+                    bool "return err code"
+                    depends on ENABLE_ERR_CODE
+                
+            endchoice  
+
+          endif
+
+           
+            if RETURN_ARG16
+                config   RETURN_ARG_VALUE16
+                    string "Return type"
+                    default "uint8_t"
+                
+            endif 
+            
+        endmenu
+    endif
+    
+    if NUM_FUNCSTIONS > 16
+        menu "funcstion4" 
+            config FUNCSTION17
+                string "name "
+                default "N"
+                
+                
+
+            config FUNCSTION_DESCRIPTION17
+                    string "Description of funcstion"
+                    default "This is a funcstion description"
+
+            config  ENABLE_ARG17
+                    bool "Enable Arg"
+                    default y
+                    
+            config  ARG_VALUE17
+                string "arg info"
+                default "uint8_t count, uint8_t* chord"
+                
+                depends on ENABLE_ARG17
+           
+            config  ENABLE_RETURN_ARG17
+                bool "Enable return Arg "
+                default y
+                help
+                    Enable return Arg.
+          if ENABLE_RETURN_ARG17
+            choice
+                prompt "Paltform of model to configure"
+                default RETURN_ARG17
+
+                config  RETURN_ARG17
+                bool "return Arg "
+               
+
+                config  RETURN_ERR_CODE17
+                    bool "return err code"
+                    depends on ENABLE_ERR_CODE
+                
+            endchoice  
+
+          endif
+
+           
+            if RETURN_ARG17
+                config   RETURN_ARG_VALUE17
+                    string "Return type"
+                    default "uint8_t"
+                
+            endif 
+            
+        endmenu
+    endif
+    
+    if NUM_FUNCSTIONS > 17
+        menu "funcstion4" 
+            config FUNCSTION18
+                string "name "
+                default "N"
+                
+                
+
+            config FUNCSTION_DESCRIPTION18
+                    string "Description of funcstion"
+                    default "This is a funcstion description"
+
+            config  ENABLE_ARG18
+                    bool "Enable Arg"
+                    default y
+                    
+            config  ARG_VALUE18
+                string "arg info"
+                default "uint8_t count, uint8_t* chord"
+                
+                depends on ENABLE_ARG18
+           
+            config  ENABLE_RETURN_ARG18
+                bool "Enable return Arg "
+                default y
+                help
+                    Enable return Arg.
+          if ENABLE_RETURN_ARG18
+            choice
+                prompt "Paltform of model to configure"
+                default RETURN_ARG18
+
+                config  RETURN_ARG18
+                bool "return Arg "
+               
+
+                config  RETURN_ERR_CODE18
+                    bool "return err code"
+                    depends on ENABLE_ERR_CODE
+                
+            endchoice  
+
+          endif
+
+           
+            if RETURN_ARG18
+                config   RETURN_ARG_VALUE18
+                    string "Return type"
+                    default "uint8_t"
+                
+            endif 
+            
+        endmenu
+    endif
+    
+    if NUM_FUNCSTIONS > 18
+        menu "funcstion" 
+            config FUNCSTION19
+                string "funcstion "
+                default "N"
+
+            config FUNCSTION_DESCRIPTION19
+                    string "Description of funcstion"
+                    default "This is a funcstion description"
+
+            config  ENABLE_ARG19
+                    bool "Enable Arg"
+                    default y
+                    
+            config  ARG_VALUE19
+                string "arg info"
+                default "uint8_t count, uint8_t* chord"
+                
+                depends on ENABLE_ARG19
+        
+            config  ENABLE_RETURN_ARG19
+                bool "Enable return Arg "
+                default y
+                help
+                    Enable return Arg.
+        if ENABLE_RETURN_ARG19
+            choice
+                prompt "Paltform of model to configure"
+                default RETURN_ARG19
+
+                config  RETURN_ARG19
+                bool "return Arg "
+            
+
+                config  RETURN_ERR_CODE19
+                    bool "return err code"
+                    depends on ENABLE_ERR_CODE
+                
+            endchoice  
+
+        endif
+
+        
+            if RETURN_ARG19
+                config   RETURN_ARG_VALUE18
+                    string "Return type"
+                    default "uint8_t"
+                
+            endif 
+            
+                
+            endmenu
+    endif
+    
+    if NUM_FUNCSTIONS > 19
+        menu "funcstion" 
+            config FUNCSTION20
+                string "name "
+                default "N"
+                
+                
+
+            config FUNCSTION_DESCRIPTION20
+                    string "Description of funcstion"
+                    default "This is a funcstion description"
+
+            config  ENABLE_ARG20
+                    bool "Enable Arg"
+                    default y
+                    
+            config  ARG_VALUE20
+                string "arg info"
+                default "uint8_t count, uint8_t* chord"
+                
+                depends on ENABLE_ARG20
+           
+            config  ENABLE_RETURN_ARG20
+                bool "Enable return Arg "
+                default y
+                help
+                    Enable return Arg.
+          if ENABLE_RETURN_ARG20
+            choice
+                prompt "Paltform of model to configure"
+                default RETURN_ARG20
+
+                config  RETURN_ARG20
+                bool "return Arg "
+               
+
+                config  RETURN_ERR_CODE20
+                    bool "return err code"
+                    depends on ENABLE_ERR_CODE
+                
+            endchoice  
+
+          endif
+
+           
+            if RETURN_ARG20
+                config   RETURN_ARG_VALUE20
+                    string "Return type"
+                    default "uint8_t"
+                
+            endif 
+            
+        endmenu
+    endif
+
+# Continue this pattern for as many strings as you want to support
+

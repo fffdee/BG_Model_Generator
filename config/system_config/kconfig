@@ -1,0 +1,88 @@
+
+    config MODEL_NAME
+        string "Model name"
+        default "BG_Model"
+        help
+            The name of the Model.
+    
+    config MODEL_VERSION
+        string "Model version"
+        default "1.0.0"
+        help
+            The version of the Model.
+    config ENABLE_STRUCT
+            bool "Enable Strcut"
+            default n
+            help
+                Enable struct for model.
+    if ENABLE_STRUCT
+        menu "Struct Setting"
+            config STRUCT_NAME
+                string "Running data strcut"
+                default "bg_runing_data"
+                help
+                    Data struct for model Running.
+            config STRUCT_MENBER
+                string "struct data menber"
+                default "N"
+                help
+                    add menber for struct.
+
+            
+        endmenu
+            
+        
+    endif
+
+    config DEBUG_SETTING
+        bool "Enable debug configuration"
+        default y
+        help
+            Debug Setting for System.
+
+    config ENABLE_ERR_CODE
+        bool "Enable ErrroCode to  configuration"
+        default y
+        help
+            Enable ErrroCode for System.
+
+    
+    if  DEBUG_SETTING
+        menu "Debug level"
+            
+            config NORMAL_DEBUG_LEVEL
+                bool "Normal debug level"
+                default y
+
+            config HIGH_DEBUG_LEVEL
+                bool "High debug level"
+                default y
+
+            config SUPER_DEBUG_LEVEL
+                bool "Super debug level"
+                default y
+
+        endmenu
+    endif
+    choice
+        prompt "Paltform of model to configure"
+        default WINDOWS
+
+        config WINDOWS
+            bool "widows"
+            select PALTFORM_WINDOWS
+
+        config LINUX
+            bool "linux"
+            select PALTFORM_LINUX
+    endchoice  
+
+    config ADD_LIB
+
+        string "Add lib"
+        default "N"
+        depends on LINUX
+
+
+    
+   
